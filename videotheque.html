@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="IMG_104203.png" />
+  <title>Vidéothèque — RAD-B</title>
+  <meta name="description" content="Découvrez en vidéo les événements, forums et interventions du RAD-B. Revivez les moments forts de notre action pour le développement du Bénin." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = {theme: {extend: {colors: {brand: {green: '#66D084',teal: '#0A677D',dark: '#0E2A32',light: '#F2FBF6'}},fontFamily: {sans: ['WixMadeforText', 'Inter', 'system-ui', 'sans-serif']}}}}</script>
+  <style>html,body{scroll-behavior:smooth}@font-face{font-family:'WixMadeforText';src:url('assets/mirror/static/media/WixMadeforTextApp-Regular_1048040404.b682f51962b316f3cd85.ttf') format('truetype');font-weight:400;font-display:swap}</style>
+</head>
+<body class="font-sans text-brand-dark antialiased bg-white">
+
+    <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/80 border-b border-brand-green/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="IMG_104203.png" alt="Logo RAD-B" class="h-10 w-10 rounded-full ring-2 ring-brand-green/40" />
+        <span class="font-semibold tracking-tight">RAD-B</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="nav-link hover:text-brand-teal">Accueil</a>
+        <a href="vision.html" class="nav-link hover:text-brand-teal">Vision</a>
+        <a href="axes.html" class="nav-link hover:text-brand-teal">Axes</a>
+        <a href="equipe.html" class="nav-link hover:text-brand-teal">Équipe</a>
+        <a href="actualites.html" class="nav-link hover:text-brand-teal">Actualités</a>
+        <a href="videotheque.html" class="nav-link hover:text-brand-teal">Vidéothèque</a>
+        <a href="phototheque.html" class="nav-link hover:text-brand-teal">Photothèque</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-teal text-white shadow-soft hover:shadow-none transition">Contact</a>
+      </nav>
+      <button type="button" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Ouvrir le menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white/95 backdrop-blur">
+      <div class="px-4 py-3 grid gap-3 text-sm">
+        <a href="index.html" class="block hover:text-brand-teal">Accueil</a>
+        <a href="vision.html" class="block hover:text-brand-teal">Vision</a>
+        <a href="axes.html" class="block hover:text-brand-teal">Axes</a>
+        <a href="equipe.html" class="block hover:text-brand-teal">Équipe</a>
+        <a href="actualites.html" class="block hover:text-brand-teal">Actualités</a>
+        <a href="videotheque.html" class="block hover:text-brand-teal">Vidéothèque</a>
+        <a href="phototheque.html" class="block hover:text-brand-teal">Photothèque</a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-brand-teal text-white shadow-soft hover:shadow-none transition">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="pt-32 pb-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-[#0B6BA8] mb-6">Vidéothèque</h1>
+        <div class="w-24 h-1 bg-[#6FCF97] mx-auto mb-8"></div>
+        <p class="text-xl text-gray-600">Revivez nos événements et interventions en vidéo</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Vidéo 1 - YouTube intégrée -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative aspect-video">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Cérémonie de lancement RAD-B"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Cérémonie de lancement du RAD-B</h3>
+            <p class="text-sm text-gray-600">15 Janvier 2025 • Événement</p>
+            <p class="text-xs text-gray-500 mt-2">Revivez la cérémonie officielle de lancement du RAD-B en présence de plus de 300 participants.</p>
+          </div>
+        </div>
+
+        <!-- Vidéo 2 - YouTube intégrée -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative aspect-video">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Forum Éducation et Emploi"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Forum sur l'Éducation et l'Emploi</h3>
+            <p class="text-sm text-gray-600">20 Janvier 2025 • Forum</p>
+            <p class="text-xs text-gray-500 mt-2">Conférence sur les enjeux de l'éducation et l'insertion professionnelle des jeunes au Bénin.</p>
+          </div>
+        </div>
+
+        <!-- Vidéo 3 - YouTube intégrée -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative aspect-video">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Discours du fondateur"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Discours du fondateur</h3>
+            <p class="text-sm text-gray-600">10 Janvier 2025 • Institutionnel</p>
+            <p class="text-xs text-gray-500 mt-2">Présentation de la vision et des objectifs du RAD-B pour les 5 prochaines années.</p>
+          </div>
+        </div>
+
+        <!-- Vidéo 4 - Atelier Formation -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative aspect-video">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Atelier de formation citoyenne"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Atelier de formation citoyenne</h3>
+            <p class="text-sm text-gray-600">25 Janvier 2025 • Formation</p>
+            <p class="text-xs text-gray-500 mt-2">Premier atelier du programme national de formation à la citoyenneté active.</p>
+          </div>
+        </div>
+
+        <!-- Vidéo 5 - Conférence -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative aspect-video">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Conférence sur la gouvernance locale"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Conférence sur la gouvernance locale</h3>
+            <p class="text-sm text-gray-600">30 Janvier 2025 • Conférence</p>
+            <p class="text-xs text-gray-500 mt-2">Débat sur le rôle des citoyens dans la gouvernance et le développement local.</p>
+          </div>
+        </div>
+
+        <!-- Vidéo 6 - Rencontre communautaire -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative aspect-video">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Rencontre avec les communautés"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Rencontre avec les communautés</h3>
+            <p class="text-sm text-gray-600">5 Février 2025 • Terrain</p>
+            <p class="text-xs text-gray-500 mt-2">Échanges avec les communautés locales sur leurs besoins et priorités de développement.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Note importante -->
+      <div class="mt-12 p-6 bg-blue-50 rounded-2xl border border-blue-200">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-blue-900 mb-2">📺 Chaîne YouTube RAD-B</h3>
+            <p class="text-sm text-blue-800">Retrouvez toutes nos vidéos, conférences et interventions sur notre chaîne YouTube officielle. Abonnez-vous pour ne rien manquer de nos actions !</p>
+            <a href="#" class="inline-flex items-center gap-2 mt-3 text-blue-600 font-semibold hover:underline">
+              Visiter notre chaîne YouTube
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="pt-12 bg-brand-teal text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="IMG_104203.png" alt="RAD-B" class="h-10 w-10 rounded-full ring-2 ring-white/30"/>
+            <div>
+              <div class="font-semibold">RAD-B</div>
+              <div class="text-white/70 text-sm">La force des Idées, la Puissance des Résultats</div>
+            </div>
+          </div>
+          <p class="text-sm text-white/80 max-w-md">Réseau de Réflexions et d'Actions pour le Développement au Bénin. Ensemble, construisons un avenir meilleur pour tous les citoyens béninois.</p>
+          <div class="flex items-center gap-4 text-white/80">
+            <a href="#" aria-label="Facebook" class="hover:opacity-90"><img src="assets/icons/facebook.svg" alt="Facebook" class="w-5 h-5"/></a>
+            <a href="#" aria-label="LinkedIn" class="hover:opacity-90"><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5"/></a>
+            <a href="#" aria-label="Instagram" class="hover:opacity-90"><img src="assets/icons/instagram.svg" alt="Instagram" class="w-5 h-5"/></a>
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Liens Rapides</div>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li><a href="vision.html" class="hover:text-white">Notre Vision</a></li>
+            <li><a href="axes.html" class="hover:text-white">Nos Axes</a></li>
+            <li><a href="actualites.html" class="hover:text-white">Actualités</a></li>
+            <li><a href="adhesion.html" class="hover:text-white">Adhérer</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Contact</div>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Zogbo, rue du collège Pythagore<br/>Cotonou, Bénin</li>
+            <li>+229 XX XX XX XX</li>
+            <li>contact@rad-benin.org</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-white/20 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70">
+        <div>© 2025 RAD-B. Tous droits réservés.</div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white">Mentions Légales</a>
+          <a href="#" class="hover:text-white">Politique de Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
