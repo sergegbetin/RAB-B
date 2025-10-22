@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="assets/icons/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/icons/favicon.png" />
-  <link rel="manifest" href="assets/manifest.json" />
-  <title>RAD-B — La force des Idées, la Puissance des Résultats</title>
-  <meta name="description" content="RAD-B — Creuset citoyen de soutien politique. Vision, mission, valeurs et actions pour un avenir efficace et solidaire." />
+  <link rel="icon" href="IMG_104203.png" />
+  <title>RAD-B — Réseau de Réflexions et d'Actions pour le Développement du Bénin</title>
+  <meta name="description" content="Creuset citoyen de soutien politique. Vision, mission, valeurs et actions pour un Bénin prospère, équitable et rayonnant." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="RAD-B — La force des Idées, la Puissance des Résultats" />
+  <meta property="og:description" content="Réseau de Réflexions et d'Actions pour le Développement du Bénin" />
+  <meta property="og:image" content="IMG_104203.png" />
+  <meta property="og:url" content="https://rad-benin.org" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -18,15 +22,14 @@
         extend: {
           colors: {
             brand: {
-              green: '#66D084', // vert logo
-              teal: '#0A677D',  // bleu canard logo
-              dark: '#0E2A32',  // ton institutionnel sombre
-              light: '#F2FBF6'  // fond très léger
+              green: '#66D084',
+              teal: '#0A677D',
+              dark: '#0E2A32',
+              light: '#F2FBF6'
             }
           },
           fontFamily: {
-            sans: ['WixMadeforText', 'Inter', 'system-ui', 'sans-serif'],
-            serif: ['Merriweather', 'serif']
+            sans: ['WixMadeforText', 'Inter', 'system-ui', 'sans-serif']
           },
           boxShadow: {
             soft: '0 10px 30px -10px rgba(10,103,125,.2)'
@@ -36,24 +39,11 @@
     }
   </script>
   <style>
-    /* Micro améliorations d'affichage */
     html,body{scroll-behavior:smooth}
-
-    /* Police locale WixMadeforText (site de référence) */
     @font-face {
       font-family: 'WixMadeforText';
       src: url('assets/mirror/static/media/WixMadeforTextApp-Regular_1048040404.b682f51962b316f3cd85.ttf') format('truetype');
       font-weight: 400; font-style: normal; font-display: swap;
-    }
-    @font-face {
-      font-family: 'WixMadeforText';
-      src: url('assets/mirror/static/media/WixMadeforTextApp-Italic_3654762839.aee29983d65a238f2a37.ttf') format('truetype');
-      font-weight: 400; font-style: italic; font-display: swap;
-    }
-    @font-face {
-      font-family: 'WixMadeforText';
-      src: url('assets/mirror/static/media/WixMadeforText-Medium.b4ba8f598cc07ff557ce.woff2') format('woff2');
-      font-weight: 500; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'WixMadeforText';
@@ -65,154 +55,105 @@
       src: url('assets/mirror/static/media/WixMadeforTextApp-Bold_2128642432.8ba0193239652ef62203.ttf') format('truetype');
       font-weight: 700; font-style: normal; font-display: swap;
     }
-    @font-face {
-      font-family: 'WixMadeforText';
-      src: url('assets/mirror/static/media/WixMadeforTextApp-BoldItalic_2607598812.bbf5e11dd9c3d70c53ff.ttf') format('truetype');
-      font-weight: 700; font-style: italic; font-display: swap;
-    }
-    @font-face {
-      font-family: 'WixMadeforText';
-      src: url('assets/mirror/static/media/WixMadeforTextApp-ExtraBold_3671583625.3ce3867ed6d028d46279.ttf') format('truetype');
-      font-weight: 800; font-style: normal; font-display: swap;
-    }
-    @font-face {
-      font-family: 'WixMadeforText';
-      src: url('assets/mirror/static/media/WixMadeforTextApp-ExtraBoldItalic_1707253935.6a772a7d9a639b43fea3.ttf') format('truetype');
-      font-weight: 800; font-style: italic; font-display: swap;
-    }
-  </style>
-  <style>
-    .animate-float{animation:float 3s ease-in-out infinite}
-    .animate-float-delayed{animation:float 4s ease-in-out infinite 1s}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-    .animate-pulse-slow{animation:pulse-slow 3s ease-in-out infinite}
-    @keyframes pulse-slow{0%,100%{opacity:.5}50%{opacity:1}}
     .fade-in{animation:fadeIn .8s ease-in}
     @keyframes fadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-    .hover-scale{transition:transform .3s ease}
-    .hover-scale:hover{transform:translateY(-8px)}
-    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
-    .animate-bounce-slow{animation:bounce 1.5s ease-in-out infinite}
   </style>
 </head>
 <body class="font-sans text-brand-dark antialiased bg-white">
-  <!-- Header / Navigation -->
+
+  <!-- Header -->
   <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/80 border-b border-brand-green/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3">
         <img src="IMG_104203.png" alt="Logo RAD-B" class="h-10 w-10 rounded-full ring-2 ring-brand-green/40" />
         <span class="font-semibold tracking-tight">RAD-B</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#vision" class="hover:text-brand-teal">Vision</a>
-        <a href="#mot" class="hover:text-brand-teal">Mot</a>
-        <a href="#actions" class="hover:text-brand-teal">Axes</a>
-        <a href="#equipe" class="hover:text-brand-teal">Équipe</a>
-        <a href="#actus" class="hover:text-brand-teal">Actualités</a>
-        <a href="#" data-open-modal="adhesion" data-modal-tab="adherer" class="hover:text-brand-teal">Adhérer</a>
-        <a href="#newsletter" class="hover:text-brand-teal">Newsletter</a>
-        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-teal text-white shadow-soft hover:shadow-none transition">Nous rejoindre</a>
+        <a href="index.html" class="nav-link hover:text-brand-teal">Accueil</a>
+        <a href="vision.html" class="nav-link hover:text-brand-teal">Vision</a>
+        <a href="axes.html" class="nav-link hover:text-brand-teal">Axes</a>
+        <a href="equipe.html" class="nav-link hover:text-brand-teal">Équipe</a>
+        <a href="actualites.html" class="nav-link hover:text-brand-teal">Actualités</a>
+        <a href="videotheque.html" class="nav-link hover:text-brand-teal">Vidéothèque</a>
+        <a href="phototheque.html" class="nav-link hover:text-brand-teal">Photothèque</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-teal text-white shadow-soft hover:shadow-none transition">Contact</a>
       </nav>
+      <button type="button" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Ouvrir le menu" id="mobile-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white/95 backdrop-blur">
+      <div class="px-4 py-3 grid gap-3 text-sm">
+        <a href="index.html" class="block hover:text-brand-teal">Accueil</a>
+        <a href="vision.html" class="block hover:text-brand-teal">Vision</a>
+        <a href="axes.html" class="block hover:text-brand-teal">Axes</a>
+        <a href="equipe.html" class="block hover:text-brand-teal">Équipe</a>
+        <a href="actualites.html" class="block hover:text-brand-teal">Actualités</a>
+        <a href="videotheque.html" class="block hover:text-brand-teal">Vidéothèque</a>
+        <a href="phototheque.html" class="block hover:text-brand-teal">Photothèque</a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-brand-teal text-white shadow-soft hover:shadow-none transition">Contact</a>
+      </div>
     </div>
   </header>
 
   <!-- Hero / Accueil -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-[#6FCF97]/10 pt-24 md:pt-28">
-    <!-- Decorative Background Elements -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-[#6FCF97]/10 pt-24 md:pt-28">
     <div class="absolute inset-0 overflow-hidden -z-10">
-      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#6FCF97] rounded-full opacity-5 blur-xl sm:blur-2xl lg:blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0B6BA8] rounded-full opacity-5 blur-xl sm:blur-2xl lg:blur-3xl -translate-x-1/3 translate-y-1/3"></div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#6FCF97] rounded-full opacity-5 blur-xl sm:blur-2xl lg:blur-3xl"></div>
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#6FCF97] rounded-full opacity-5 blur-3xl translate-x-1/3 -translate-y-1/3"></div>
+      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0B6BA8] rounded-full opacity-5 blur-3xl -translate-x-1/3 translate-y-1/3"></div>
     </div>
 
-    <!-- Grid Pattern Overlay -->
-    <div class="absolute inset-0 -z-10">
-      <div class="absolute inset-0" style="background-image: linear-gradient(rgba(11,107,168,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(11,107,168,.25) 1px, transparent 1px); background-size: 50px 50px; opacity: .06;"></div>
-    </div>
-
-    <!-- Content -->
     <div class="relative z-10 container mx-auto px-4 py-16 md:py-20">
       <div class="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
-        <!-- Left Column - Logo & Visual (moved to left) -->
-        <div class="relative flex items-center justify-center lg:order-1 order-2" data-reveal>
+        <div class="relative flex items-center justify-center lg:order-1 order-2">
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-br from-[#6FCF97]/15 to-[#0B6BA8]/15 rounded-2xl blur-2xl" style="width: 120%; height: 120%; left: -10%; top: -10%;"></div>
-            <div class="relative bg-white rounded-2xl p-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.25)] ring-1 ring-black/5">
+            <div class="relative bg-white rounded-2xl p-6 shadow-2xl ring-1 ring-black/5">
               <img src="IMG.png" alt="RAD-B Logo" class="relative z-10 w-full max-w-md mx-auto rounded-xl" />
             </div>
-            <div class="absolute -top-10 -left-10 w-20 h-20 bg-[#6FCF97] rounded-full opacity-20 blur-xl"></div>
-            <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-[#0B6BA8] rounded-full opacity-20 blur-xl"></div>
           </div>
         </div>
 
-        <!-- Right Column - Text Content -->
-        <div class="text-center lg:text-left space-y-4 lg:order-2 order-1" data-reveal>
+        <div class="text-center lg:text-left space-y-4 lg:order-2 order-1">
           <span class="inline-block bg-[#6FCF97]/20 text-[#0B6BA8] px-6 py-2 rounded-full text-sm font-semibold mb-2">Mouvement Citoyen</span>
-          <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span class="text-[#0B6BA8]">RAD-B</span>
           </h1>
           <p class="text-2xl md:text-3xl text-brand-dark font-medium">
-            <span class="font-semibold text-[#0B6BA8]">R</span>éseau de Réflexions et d’<span class="font-semibold text-[#0B6BA8]">A</span>ctions
+            <span class="font-semibold text-[#0B6BA8]">R</span>éseau de Réflexions et d'<span class="font-semibold text-[#0B6BA8]">A</span>ctions
           </p>
           <p class="text-2xl md:text-3xl text-brand-dark font-medium">
             pour le <span class="font-semibold text-[#0B6BA8]">D</span>éveloppement du <span class="font-semibold text-[#0B6BA8]">B</span>énin
           </p>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#vision" class="inline-flex items-center justify-center bg-[#0B6BA8] hover:bg-[#0B6BA8] text-white px-8 py-4 text-lg rounded-full shadow-[0_12px_24px_-12px_rgba(11,107,168,.5)] transition-all duration-300 hover:scale-105">Découvrir notre vision
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-6">
+            <a href="vision.html" class="inline-flex items-center justify-center bg-[#0B6BA8] text-white px-8 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-105">
+              Découvrir notre vision
               <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
-            <a href="#engagement" data-open-modal="adhesion" class="inline-flex items-center justify-center border border-[#6FCF97]/80 bg-white/60 backdrop-blur-sm text-[#0B6BA8] hover:bg-white px-8 py-3 text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105">Nous rejoindre</a>
+            <a href="#engagement" class="inline-flex items-center justify-center border border-[#6FCF97]/80 bg-white/60 backdrop-blur-sm text-[#0B6BA8] hover:bg-white px-8 py-3 text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105">Nous rejoindre</a>
           </div>
-        </div>
-
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center cursor-pointer" onclick="document.getElementById('vision').scrollIntoView({behavior: 'smooth'})">
-        <p class="text-sm text-gray-400 mb-2">Défiler vers le bas</p>
-        <svg class="w-6 h-6 text-[#0B6BA8]/80 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vision -->
-  <section id="vision" class="py-20 md:py-28 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10" data-reveal>
-        <h2 class="text-3xl font-bold text-brand-teal">Notre Vision</h2>
-        <div class="mt-2 w-24 h-1 bg-brand-green/60 rounded mx-auto"></div>
-        <p class="mt-4 text-brand-dark/80">Le RAD-B est un mouvement citoyen qui ambitionne de devenir le creuset des meilleures idées et des actions les plus impactantes pour le développement du Bénin.</p>
-        <p class="mt-2 text-brand-dark/70">Nous croyons en la force du dialogue constructif, en la puissance de la réflexion collective et en l'efficacité de l'action coordonnée. Notre mission est de bâtir un Bénin prospère, équitable et rayonnant pour tous ses citoyens.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-8 rounded-2xl bg-white ring-1 ring-black/5 shadow-soft text-center" data-reveal>
-          <div class="mx-auto mb-4 w-12 h-12 rounded-full bg-brand-light ring-1 ring-brand-green/40 flex items-center justify-center">
-            <img src="assets/icons/lightbulb.svg" alt="Innovation" class="w-6 h-6"/>
-          </div>
-          <h3 class="font-semibold text-brand-teal">Innovation</h3>
-          <p class="mt-2 text-sm text-brand-dark/80">Cultiver la pensée créative et proposer des solutions novatrices aux défis du développement.</p>
-        </div>
-        <div class="p-8 rounded-2xl bg-white ring-1 ring-black/5 shadow-soft text-center" data-reveal>
-          <div class="mx-auto mb-4 w-12 h-12 rounded-full bg-brand-light ring-1 ring-brand-green/40 flex items-center justify-center">
-            <img src="assets/icons/users.svg" alt="Inclusion" class="w-6 h-6"/>
-          </div>
-          <h3 class="font-semibold text-brand-teal">Inclusion</h3>
-          <p class="mt-2 text-sm text-brand-dark/80">Rassembler toutes les forces vives du Bénin autour d'un projet commun de progrès et de prospérité.</p>
-        </div>
-        <div class="p-8 rounded-2xl bg-white ring-1 ring-black/5 shadow-soft text-center" data-reveal>
-          <div class="mx-auto mb-4 w-12 h-12 rounded-full bg-brand-light ring-1 ring-brand-green/40 flex items-center justify-center">
-            <img src="assets/icons/target.svg" alt="Action" class="w-6 h-6"/>
-          </div>
-          <h3 class="font-semibold text-brand-teal">Action</h3>
-          <p class="mt-2 text-sm text-brand-dark/80">Transformer les idées et réflexions en réalisations concrètes au service des citoyens et du pays.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mot du fondateur -->
+  <!-- Vision en résumé -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-[#0B6BA8] mb-6">Notre Vision</h2>
+      <div class="w-24 h-1 bg-[#6FCF97] mx-auto mb-8"></div>
+      <p class="text-xl text-gray-700 leading-relaxed mb-8">
+        Le RAD-B ambitionne de devenir le creuset des meilleures idées et des actions les plus impactantes pour le développement du Bénin. Nous croyons en un Bénin prospère, équitable et rayonnant où chaque citoyen peut s'épanouir pleinement.
+      </p>
+      <a href="vision.html" class="inline-flex items-center text-brand-teal font-semibold hover:underline">
+        En savoir plus
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+  </section>
+
+   <!-- Mot du fondateur -->
   <section id="mot" class="py-24 bg-[#0B6BA8] relative overflow-hidden">
     <div class="absolute top-0 left-0 w-64 h-64 bg-[#6FCF97] rounded-full opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#6FCF97] rounded-full opacity-10 translate-x-1/2 translate-y-1/2"></div>
@@ -222,7 +163,7 @@
         <!-- Image -->
         <div class="relative fade-in">
           <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-            <img src="./assets/images/fondateur.jpg" alt="Fondateur RAD-B" class="w-full h-full object-cover">
+            <img src="images/fondateur.jpg" alt="Fondateur RAD-B" class="w-full h-full object-cover">
           </div>
           <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-[#6FCF97] rounded-full flex items-center justify-center shadow-xl">
             <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
@@ -256,171 +197,97 @@
     </div>
   </section>
 
-  <!-- Nos Axes d'Action -->
-  <section id="actions" class="py-20 md:py-28 bg-white">
+  <!-- Nos Axes en aperçu -->
+  <section class="py-20 bg-brand-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10" data-reveal>
-        <h2 class="text-3xl font-bold">Nos Axes d'Action</h2>
-        <div class="mt-2 w-32 h-1 bg-brand-green/60 rounded mx-auto"></div>
-        <p class="mt-3 text-brand-dark/70">Des initiatives concrètes et mesurables dans les domaines clés du développement.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#6FCF97]" data-reveal>
-          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22h11A2.5 2.5 0 0 0 20 19.5v-15A2.5 2.5 0 0 0 17.5 2h-11A2.5 2.5 0 0 0 4 4.5v15Z"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-[#0B6BA8] mb-4">Éducation & Formation</h3>
-          <p class="text-gray-600 leading-relaxed">Programmes de renforcement des capacités et d'accès équitable à une éducation de qualité pour tous.</p>
-        </div>
-        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#6FCF97]" data-reveal>
-          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="M16 3h-8v4h8V3Z"/></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-[#0B6BA8] mb-4">Économie & Emploi</h3>
-          <p class="text-gray-600 leading-relaxed">Soutien à l'entrepreneuriat local, création d'emplois décents et développement économique inclusif.</p>
-        </div>
-        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#6FCF97]" data-reveal>
-          <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 22l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-[#0B6BA8] mb-4">Santé & Bien-être</h3>
-          <p class="text-gray-600 leading-relaxed">Amélioration de l'accès aux soins de santé et promotion du bien-être social dans toutes les communautés.</p>
-        </div>
-        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#6FCF97]" data-reveal>
-          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-[#0B6BA8] mb-4">Gouvernance & Citoyenneté</h3>
-          <p class="text-gray-600 leading-relaxed">Renforcement de la participation citoyenne et promotion d'une gouvernance transparente et responsable.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- L’équipe / Les acteurs -->
-  <section id="equipe" class="py-20 md:py-28 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12" data-reveal>
-        <h2 class="text-3xl font-bold">Notre Équipe</h2>
-        <p class="text-brand-dark/70">Des femmes et des hommes engagés pour l'action publique.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="group bg-white rounded-2xl shadow-soft ring-1 ring-black/5 overflow-hidden" data-reveal>
-          <div class="relative overflow-hidden h-64">
-            <img src="assets/images/team1.jpg" alt="Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0B6BA8]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-4">
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" class="w-5 h-5" alt="LinkedIn"/></a>
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="Email"><img src="assets/icons/mail.svg" class="w-5 h-5" alt="Email"/></a>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <div class="text-brand-teal font-semibold">Frédéric ADOUNVOU</div>
-            <div class="text-xs text-brand-dark/60 mb-2">Membre</div>
-            <p class="text-sm text-brand-dark/70">Engagé pour l'action citoyenne.</p>
-          </div>
-        </div>
-        <div class="group bg-white rounded-2xl shadow-soft ring-1 ring-black/5 overflow-hidden" data-reveal>
-          <div class="relative overflow-hidden h-64">
-            <img src="assets/images/team2.jpg" alt="Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0B6BA8]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-4">
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" class="w-5 h-5" alt="LinkedIn"/></a>
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="Email"><img src="assets/icons/mail.svg" class="w-5 h-5" alt="Email"/></a>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <div class="text-brand-teal font-semibold">Marius AWONON</div>
-            <div class="text-xs text-brand-dark/60 mb-2">Membre</div>
-            <p class="text-sm text-brand-dark/70">Mobilisation et terrain.</p>
-          </div>
-        </div>
-        <div class="group bg-white rounded-2xl shadow-soft ring-1 ring-black/5 overflow-hidden" data-reveal>
-          <div class="relative overflow-hidden h-64">
-            <img src="assets/images/team3.jpg" alt="Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0B6BA8]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-4">
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" class="w-5 h-5" alt="LinkedIn"/></a>
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="Email"><img src="assets/icons/mail.svg" class="w-5 h-5" alt="Email"/></a>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <div class="text-brand-teal font-semibold">David KOFFI</div>
-            <div class="text-xs text-brand-dark/60 mb-2">Trésorier</div>
-            <p class="text-sm text-brand-dark/70">Expert-comptable et financier.</p>
-          </div>
-        </div>
-        <div class="group bg-white rounded-2xl shadow-soft ring-1 ring-black/5 overflow-hidden" data-reveal>
-          <div class="relative overflow-hidden h-64">
-            <img src="assets/images/team4.jpg" alt="Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0B6BA8]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-4">
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" class="w-5 h-5" alt="LinkedIn"/></a>
-              <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#6FCF97] transition-colors" href="#" aria-label="Email"><img src="assets/icons/mail.svg" class="w-5 h-5" alt="Email"/></a>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <div class="text-brand-teal font-semibold">Fatou DIALLO</div>
-            <div class="text-xs text-brand-dark/60 mb-2">Chargée de Communication</div>
-            <p class="text-sm text-brand-dark/70">Stratégie et communication politique.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Actualités / Communiqués -->
-  <section id="actus" class="py-20 md:py-28 bg-brand-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10" data-reveal>
-        <h2 class="text-3xl font-bold">Actualités</h2>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[#0B6BA8]">Nos Axes d'Action</h2>
         <div class="mt-2 w-24 h-1 bg-brand-green/60 rounded mx-auto"></div>
-        <p class="mt-3 text-brand-dark/70">Suivez nos dernières initiatives et événements.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-teal mb-2">Éducation & Formation</h3>
+          <p class="text-gray-600 text-sm">Accès équitable à une éducation de qualité</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-teal mb-2">Économie & Emploi</h3>
+          <p class="text-gray-600 text-sm">Entrepreneuriat et création d'emplois décents</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-teal mb-2">Santé & Bien-être</h3>
+          <p class="text-gray-600 text-sm">Accès aux soins dans toutes les communautés</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="axes.html" class="inline-flex items-center text-brand-teal font-semibold hover:underline">
+          Découvrir tous nos axes d'action
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Actualités -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[#0B6BA8]"> Actualités</h2>
+        <div class="mt-2 w-24 h-1 bg-brand-green/60 rounded mx-auto"></div>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-black/5 hover:-translate-y-2" data-reveal>
-          <div class="relative h-56 bg-cover bg-center" style="background-image:url('./assets/images/actus1.jpg')">
-            <span class="absolute top-4 left-4 px-3 py-1 text-xs rounded-full bg-[#6FCF97] text-white font-semibold shadow">Événement</span>
+        <article class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 relative">
+          <img src="images/lancement-evenement-800.jpg" alt="Lancement RAD-B" class="w-full h-48 object-cover">
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 text-xs rounded-full bg-[#6FCF97] text-white font-semibold">Événement</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center text-brand-dark/60 text-sm mb-3">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
-              15 Janvier 2025
-            </div>
-            <h3 class="text-lg font-semibold text-brand-teal mb-2 group-hover:text-[#6FCF97] transition-colors">Lancement officiel du RAD-B</h3>
-            <p class="text-sm text-brand-dark/80">Une nouvelle ère s'ouvre pour le développement participatif au Bénin avec notre lancement.</p>
-            <a href="#" data-open-news="news-1" class="text-sm text-brand-teal mt-3 inline-flex items-center">Lire la suite <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Lancement officiel du RAD-B</h3>
+            <p class="text-sm text-gray-600 mb-3">15 Janvier 2025</p>
+            <a href="actualites/lancement-officiel.html" class="text-sm text-brand-teal font-semibold hover:underline">Lire la suite →</a>
           </div>
         </article>
-        <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-black/5 hover:-translate-y-2" data-reveal>
-          <div class="relative h-56 bg-cover bg-center" style="background-image:url('assets/images/news2.jpg')">
-            <span class="absolute top-4 left-4 px-3 py-1 text-xs rounded-full bg-[#6FCF97] text-white font-semibold shadow">Forum</span>
+        <article class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 relative">
+          <img src="images/lancement-evenement-800.jpg" alt="Forum Éducation" class="w-full h-48 object-cover">
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 text-xs rounded-full bg-[#6FCF97] text-white font-semibold">Forum</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center text-brand-dark/60 text-sm mb-3">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
-              20 Janvier 2025
-            </div>
-            <h3 class="text-lg font-semibold text-brand-teal mb-2 group-hover:text-[#6FCF97] transition-colors">Forum sur l'Éducation et l'Emploi</h3>
-            <p class="text-sm text-brand-dark/80">Rencontre thématique réunissant acteurs et experts autour des défis des jeunes.</p>
-            <a href="#" data-open-news="news-2" class="text-sm text-brand-teal mt-3 inline-flex items-center">Lire la suite <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Forum Éducation et Emploi</h3>
+            <p class="text-sm text-gray-600 mb-3">20 Janvier 2025</p>
+            <a href="actualites/forum-education.html" class="text-sm text-brand-teal font-semibold hover:underline">Lire la suite →</a>
           </div>
         </article>
-        <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-black/5 hover:-translate-y-2" data-reveal>
-          <div class="relative h-56 bg-cover bg-center" style="background-image:url('./assets/images/actus3.jpg')">
-            <span class="absolute top-4 left-4 px-3 py-1 text-xs rounded-full bg-[#6FCF97] text-white font-semibold shadow">Programme</span>
+        <article class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 relative">
+          <img src="images/formation-citoyenne-800.jpg" alt="Programme Formation" class="w-full h-48 object-cover">
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 text-xs rounded-full bg-[#6FCF97] text-white font-semibold">Programme</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center text-brand-dark/60 text-sm mb-3">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
-              25 Janvier 2025
-            </div>
-            <h3 class="text-lg font-semibold text-brand-teal mb-2 group-hover:text-[#6FCF97] transition-colors">Programme de formation citoyenne</h3>
-            <p class="text-sm text-brand-dark/80">Lancement d'un programme national de formation à la participation citoyenne.</p>
-            <a href="#" data-open-news="news-3" class="text-sm text-brand-teal mt-3 inline-flex items-center">Lire la suite <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <h3 class="text-lg font-semibold text-brand-teal mb-2">Programme de formation citoyenne</h3>
+            <p class="text-sm text-gray-600 mb-3">25 Janvier 2025</p>
+            <a href="actualites/programme-formation.html" class="text-sm text-brand-teal font-semibold hover:underline">Lire la suite →</a>
           </div>
         </article>
+      </div>
+      <div class="text-center mt-8">
+        <a href="actualites.html" class="inline-flex items-center text-brand-teal font-semibold hover:underline">
+          Voir toutes les actualités
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter -->
+   <!-- Newsletter -->
   <section id="newsletter" class="py-20 bg-white">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-reveal>
       <h2 class="text-3xl font-bold text-brand-teal">Rejoindre la newsletter</h2>
@@ -434,85 +301,31 @@
     </div>
   </section>
 
-  <!-- Engagement -->
+
+  <!-- CTA Engagement -->
   <section id="engagement" class="py-24 bg-gradient-to-br from-[#0B6BA8] to-[#0B6BA8]/90 relative overflow-hidden">
     <div class="absolute top-0 right-0 w-96 h-96 bg-[#6FCF97] rounded-full opacity-10 translate-x-1/3 -translate-y-1/3"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#6FCF97] rounded-full opacity-10 -translate-x-1/3 translate-y-1/3"></div>
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white" data-reveal>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
       <h2 class="text-4xl md:text-5xl font-bold mb-6">Rejoignez le Mouvement</h2>
       <div class="w-24 h-1 bg-[#6FCF97] mx-auto mb-8"></div>
-      <p class="text-xl leading-relaxed mb-12 opacity-90">Le Bénin de demain se construit aujourd'hui. Votre voix compte, vos idées comptent, votre engagement compte. Ensemble, faisons la différence.</p>
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
-        <button type="button" data-open-modal="adhesion" data-modal-tab="adherer" class="text-left w-full bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
-          <svg class="w-12 h-12 text-[#6FCF97] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+      <p class="text-xl leading-relaxed mb-12 opacity-90">Le Bénin de demain se construit aujourd'hui. Votre voix compte, vos idées comptent, votre engagement compte.</p>
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <a href="adhesion.html" class="block bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
+          <svg class="w-12 h-12 text-[#6FCF97] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           <h3 class="text-xl font-bold mb-2">Adhérer</h3>
           <p class="text-sm opacity-75">Devenez membre actif</p>
-        </button>
-        <button type="button" data-open-modal="adhesion" data-modal-tab="soutenir" class="text-left w-full bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
-          <svg class="w-12 h-12 text-[#6FCF97] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
+        </a>
+        <a href="soutenir.html" class="block bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
+          <svg class="w-12 h-12 text-[#6FCF97] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
           <h3 class="text-xl font-bold mb-2">Soutenir</h3>
           <p class="text-sm opacity-75">Contribuez à nos actions</p>
-        </button>
-        <button type="button" data-open-modal="adhesion" data-modal-tab="sengager" class="text-left w-full bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
-          <svg class="w-12 h-12 text-[#6FCF97] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 0 1 1.789 2.894l-3.5 7A2 2 0 0 1 15.263 21h-4.017A2.246 2.246 0 0 1 9 20l-2-1m7-9V5a2 2 0 0 0-2-2h-.095a1 1 0 0 0-.905.905c0 .714-.211 1.412-.608 2.006L7 11v9"/></svg>
+        </a>
+        <a href="sengager.html" class="block bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
+          <svg class="w-12 h-12 text-[#6FCF97] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.512 0-1.024-.195-1.414-.586l-2-2m8-7V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9"/></svg>
           <h3 class="text-xl font-bold mb-2">S'engager</h3>
           <p class="text-sm opacity-75">Participez aux initiatives</p>
-        </button>
-      </div>
-      <a href="#" data-open-modal="adhesion" data-modal-tab="adherer" class="inline-flex items-center justify-center bg-[#6FCF97] hover:bg-[#5ABE86] text-white px-12 py-4 text-lg rounded-full shadow-2xl transition-all hover:scale-105">Je veux m'engager</a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-20 md:py-28 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10" data-reveal>
-        <h2 class="text-3xl font-bold text-brand-teal">Contactez-nous</h2>
-        <div class="mt-2 w-24 h-1 bg-brand-green/60 rounded mx-auto"></div>
-        <p class="mt-3 text-brand-dark/70">Nous sommes à votre écoute. N'hésitez pas à nous contacter pour toute question ou suggestion.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Infos -->
-        <div class="p-6 bg-white rounded-2xl shadow-soft ring-1 ring-black/5" data-reveal>
-          <h3 class="font-semibold text-brand-teal mb-4">Nos Coordonnées</h3>
-          <div class="space-y-4 text-sm">
-            <div class="flex items-start gap-3">
-              <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-light ring-1 ring-brand-green/40"><img src="assets/icons/location.svg" alt="Adresse" class="w-5 h-5"/></span>
-              <div>
-                <div class="font-medium">Adresse</div>
-                <div class="text-brand-dark/70">Zogbo, rue du collège Pythagore<br/>Cotonou, Bénin</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-light ring-1 ring-brand-green/40"><img src="assets/icons/phone.svg" alt="Téléphone" class="w-5 h-5"/></span>
-              <div>
-                <div class="font-medium">Téléphone</div>
-                <div class="text-brand-dark/70">+229 XX XX XX XX<br/>+229 XX XX XX XX</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-light ring-1 ring-brand-green/40"><img src="assets/icons/mail.svg" alt="Email" class="w-5 h-5"/></span>
-              <div>
-                <div class="font-medium">Email</div>
-                <div class="text-brand-dark/70">contact@rad-benin.org<br/>info@rad-benin.org</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Formulaire -->
-        <div class="p-6 bg-white rounded-2xl shadow-soft ring-1 ring-black/5" data-reveal>
-          <h3 class="font-semibold text-brand-teal mb-4">Envoyez-nous un message</h3>
-          <form class="grid gap-4" onsubmit="return false;">
-            <input type="text" placeholder="Nom complet *" class="w-full px-4 py-3 rounded-xl ring-1 ring-brand-green/30 focus:ring-brand-teal outline-none" required />
-            <input type="email" placeholder="Email *" class="w-full px-4 py-3 rounded-xl ring-1 ring-brand-green/30 focus:ring-brand-teal outline-none" required />
-            <input type="tel" placeholder="Téléphone" class="w-full px-4 py-3 rounded-xl ring-1 ring-brand-green/30 focus:ring-brand-teal outline-none" />
-            <textarea rows="5" placeholder="Message *" class="w-full px-4 py-3 rounded-xl ring-1 ring-brand-green/30 focus:ring-brand-teal outline-none" required></textarea>
-            <button type="submit" class="px-6 py-3 rounded-full bg-brand-green text-white hover:opacity-90 transition">Envoyer le message</button>
-          </form>
-        </div>
-      </div>
-      <div class="mt-6" data-reveal>
-        <iframe title="Cotonou" class="w-full h-64 rounded-2xl ring-1 ring-black/5" src="https://www.google.com/maps?q=Cotonou&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </a>
       </div>
     </div>
   </section>
@@ -540,12 +353,11 @@
         <div>
           <div class="font-semibold mb-3">Liens Rapides</div>
           <ul class="space-y-2 text-white/80 text-sm">
-            <li><a href="#vision" class="hover:text-white">Notre Vision</a></li>
-            <li><a href="#actions" class="hover:text-white">Nos Axes</a></li>
-            <li><a href="#actus" class="hover:text-white">Actualités</a></li>
-            <li><a href="#engagement" class="hover:text-white">Adhérer</a></li>
-            <li><a href="#newsletter" class="hover:text-white">Newsletter</a></li>
-            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+            <li><a href="vision.html" class="hover:text-white">Notre Vision</a></li>
+            <li><a href="axes.html" class="hover:text-white">Nos Axes</a></li>
+            <li><a href="actualites.html" class="hover:text-white">Actualités</a></li>
+            <li><a href="adhesion.html" class="hover:text-white">Adhérer</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -558,7 +370,7 @@
         </div>
       </div>
       <div class="mt-10 border-t border-white/20 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70">
-        <div> 2025 RAD-B. Tous droits réservés.</div>
+        <div>© 2025 RAD-B. Tous droits réservés.</div>
         <div class="flex items-center gap-6">
           <a href="#" class="hover:text-white">Mentions Légales</a>
           <a href="#" class="hover:text-white">Politique de Confidentialité</a>
@@ -568,181 +380,24 @@
     </div>
   </footer>
 
-  <!-- Templates Actualités (contenu long) -->
-  <template id="news-1">
-    <h3 class="text-2xl font-bold text-brand-teal mb-3">Lancement officiel du RAD-B</h3>
-    <p class="text-brand-dark/80 leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius sem eget tellus tempor ultricies et at orci. Vestibulum ac auctor dui, vel malesuada tellus. Proin ex sapien, molestie in libero ac, mollis porttitor dui. Sed euismod diam nec luctus sollicitudin. Donec euismod, mi vel elementum mattis, orci magna ultrices dui, sed eleifend justo libero rhoncus felis. Donec sodales consectetur accumsan. Donec id sodales justo. Sed porta lacinia purus eu condimentum. Nulla ut ante ac justo dignissim aliquet vitae at odio. Etiam luctus diam nec libero gravida luctus. Aenean iaculis massa quis leo vehicula accumsan. Morbi nec ligula quis est pretium venenatis nec ac orci. Quisque eget justo at velit bibendum vestibulum. Donec luctus porttitor massa, eget dapibus ipsum. Fusce dignissim iaculis quam, sed rhoncus neque lobortis pharetra.
-    </p>
-  </template>
-  <template id="news-2">
-    <h3 class="text-2xl font-bold text-brand-teal mb-3">Forum sur l'Éducation et l'Emploi</h3>
-    <p class="text-brand-dark/80 leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius sem eget tellus tempor ultricies et at orci. Vestibulum ac auctor dui, vel malesuada tellus. Proin ex sapien, molestie in libero ac, mollis porttitor dui. Sed euismod diam nec luctus sollicitudin. Donec euismod, mi vel elementum mattis, orci magna ultrices dui, sed eleifend justo libero rhoncus felis. Donec sodales consectetur accumsan. Donec id sodales justo. Sed porta lacinia purus eu condimentum. Nulla ut ante ac justo dignissim aliquet vitae at odio. Etiam luctus diam nec libero gravida luctus. Aenean iaculis massa quis leo vehicula accumsan. Morbi nec ligula quis est pretium venenatis nec ac orci. Quisque eget justo at velit bibendum vestibulum. Donec luctus porttitor massa, eget dapibus ipsum. Fusce dignissim iaculis quam, sed rhoncus neque lobortis pharetra.
-    </p>
-  </template>
-  <template id="news-3">
-    <h3 class="text-2xl font-bold text-brand-teal mb-3">Programme de formation citoyenne</h3>
-    <p class="text-brand-dark/80 leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius sem eget tellus tempor ultricies et at orci. Vestibulum ac auctor dui, vel malesuada tellus. Proin ex sapien, molestie in libero ac, mollis porttitor dui. Sed euismod diam nec luctus sollicitudin. Donec euismod, mi vel elementum mattis, orci magna ultrices dui, sed eleifend justo libero rhoncus felis. Donec sodales consectetur accumsan. Donec id sodales justo. Sed porta lacinia purus eu condimentum. Nulla ut ante ac justo dignissim aliquet vitae at odio. Etiam luctus diam nec libero gravida luctus. Aenean iaculis massa quis leo vehicula accumsan. Morbi nec ligula quis est pretium venenatis nec ac orci. Quisque eget justo at velit bibendum vestibulum. Donec luctus porttitor massa, eget dapibus ipsum. Fusce dignissim iaculis quam, sed rhoncus neque lobortis pharetra.
-    </p>
-  </template>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 
-  <!-- Modal Actualité -->
-  <div id="newsModal" class="fixed inset-0 z-[95] hidden">
-    <div class="absolute inset-0 bg-black/50" data-close-news></div>
-    <div class="relative mx-auto my-8 w-[95%] max-w-3xl bg-white rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden">
-      <div class="flex items-center justify-between px-6 py-4 border-b">
-        <div class="flex items-center gap-2">
-          <span class="inline-block px-2 py-0.5 text-xs rounded-full bg-brand-light text-brand-teal" id="newsBadge">Actualité</span>
-          <span class="text-xs text-brand-dark/60" id="newsDate">—</span>
-        </div>
-        <button type="button" class="p-2 rounded hover:bg-gray-100" aria-label="Fermer" data-close-news>
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <div class="px-6 py-5">
-        <div id="newsContent" class="prose prose-slate max-w-none"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Adhésion / Soutenir / S'engager -->
-  <div id="adhesionModal" class="fixed inset-0 z-[100] hidden">
-    <div class="absolute inset-0 bg-black/50" data-close-modal></div>
-    <div class="relative mx-auto my-8 w-[95%] max-w-3xl bg-white rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden">
-      <div class="flex items-center justify-between px-6 py-4 border-b">
-        <h3 class="text-xl font-semibold text-brand-teal">Rejoindre le RAD-B</h3>
-        <button type="button" class="p-2 rounded hover:bg-gray-100" aria-label="Fermer" data-close-modal>
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <div class="px-6 pt-4">
-        <div class="flex gap-2 mb-4">
-          <button type="button" class="tab-btn px-4 py-2 rounded-full text-sm bg-brand-light text-brand-teal" data-tab="adherer">Adhérer</button>
-          <button type="button" class="tab-btn px-4 py-2 rounded-full text-sm hover:bg-gray-100" data-tab="soutenir">Soutenir</button>
-          <button type="button" class="tab-btn px-4 py-2 rounded-full text-sm hover:bg-gray-100" data-tab="sengager">S'engager</button>
-        </div>
-      </div>
-      <div class="px-6 pb-6">
-        <!-- Panel: Adhérer -->
-        <form id="form-adherer" class="tab-panel grid gap-4" data-tab-panel="adherer">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm font-medium">Nom</label>
-              <input type="text" required class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-            <div>
-              <label class="text-sm font-medium">Prénom</label>
-              <input type="text" required class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-          </div>
-          <div class="grid md:grid-cols-3 gap-4">
-            <div>
-              <label class="text-sm font-medium">Sexe</label>
-              <select class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none"><option>Homme</option><option>Femme</option><option>Autre</option></select>
-            </div>
-            <div class="md:col-span-2">
-              <label class="text-sm font-medium">Fonction</label>
-              <input type="text" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-          </div>
-          <div>
-            <label class="text-sm font-medium">Département - Commune - Arrondissement - Quartier de ville</label>
-            <input type="text" placeholder="Ex: Littoral - Cotonou - 12ème - Zogbo" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-          </div>
-          <div>
-            <label class="text-sm font-medium mb-2 block">Tranche d'âge</label>
-            <div class="grid sm:grid-cols-4 gap-3 text-sm">
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="radio" name="age" value="18-25">18-25</label>
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="radio" name="age" value="25-35">25-35</label>
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="radio" name="age" value="35-50">35-50</label>
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="radio" name="age" value="50+">50+</label>
-            </div>
-          </div>
-          <div>
-            <label class="text-sm font-medium">Quelles sont vos attentes ?</label>
-            <textarea rows="4" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none"></textarea>
-          </div>
-          <div class="flex justify-end gap-3 pt-2">
-            <button type="button" class="px-4 py-2 rounded-lg ring-1 ring-gray-200 hover:bg-gray-50" data-close-modal>Annuler</button>
-            <button type="submit" class="px-4 py-2 rounded-lg bg-brand-teal text-white hover:opacity-90">Envoyer la demande</button>
-          </div>
-        </form>
-        <!-- Panel: Soutenir -->
-        <form id="form-soutenir" class="tab-panel grid gap-4 hidden" data-tab-panel="soutenir">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm font-medium">Nom complet</label>
-              <input type="text" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-            <div>
-              <label class="text-sm font-medium">Email</label>
-              <input type="email" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-          </div>
-          <div>
-            <label class="text-sm font-medium">Type de soutien</label>
-            <select class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none">
-              <option>Financier</option>
-              <option>Matériel</option>
-              <option>Compétences</option>
-              <option>Autre</option>
-            </select>
-          </div>
-          <div>
-            <label class="text-sm font-medium">Détails</label>
-            <textarea rows="4" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" placeholder="Décrivez votre contribution proposée"></textarea>
-          </div>
-          <div class="flex justify-end gap-3 pt-2">
-            <button type="button" class="px-4 py-2 rounded-lg ring-1 ring-gray-200 hover:bg-gray-50" data-close-modal>Annuler</button>
-            <button type="submit" class="px-4 py-2 rounded-lg bg-brand-teal text-white hover:opacity-90">Proposer un soutien</button>
-          </div>
-        </form>
-        <!-- Panel: S'engager -->
-        <form id="form-sengager" class="tab-panel grid gap-4 hidden" data-tab-panel="sengager">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm font-medium">Nom complet</label>
-              <input type="text" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-            <div>
-              <label class="text-sm font-medium">Email</label>
-              <input type="email" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-          </div>
-          <div>
-            <label class="text-sm font-medium mb-2 block">Domaines d'engagement</label>
-            <div class="grid sm:grid-cols-2 gap-3 text-sm">
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="checkbox" value="Communication">Communication</label>
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="checkbox" value="Mobilisation">Mobilisation</label>
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="checkbox" value="Formation">Formation</label>
-              <label class="inline-flex items-center gap-2 ring-1 ring-gray-200 rounded-lg px-3 py-2 cursor-pointer"><input type="checkbox" value="Logistique">Logistique</label>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm font-medium">Disponibilités</label>
-              <select class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none"><option>Temps plein</option><option>Temps partiel</option><option>Ponctuel</option></select>
-            </div>
-            <div>
-              <label class="text-sm font-medium">Téléphone</label>
-              <input type="tel" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" />
-            </div>
-          </div>
-          <div>
-            <label class="text-sm font-medium">Message</label>
-            <textarea rows="4" class="mt-1 w-full px-4 py-2 rounded-lg ring-1 ring-gray-200 focus:ring-brand-teal outline-none" placeholder="Dites-nous comment vous souhaitez contribuer"></textarea>
-          </div>
-          <div class="flex justify-end gap-3 pt-2">
-            <button type="button" class="px-4 py-2 rounded-lg ring-1 ring-gray-200 hover:bg-gray-50" data-close-modal>Annuler</button>
-            <button type="submit" class="px-4 py-2 rounded-lg bg-brand-teal text-white hover:opacity-90">Envoyer</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
+  <script>
+    // Menu mobile
+    const toggleBtn = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
