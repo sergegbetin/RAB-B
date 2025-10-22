@@ -1,199 +1,98 @@
-'use strict';
+// RAD-B - Script principal
+// Gestion des interactions et formulaires
 
-// Année dynamique
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('✅ RAD-B: Site chargé avec succès');
 
-// Scroll reveal simple
-const revealEls = document.querySelectorAll('[data-reveal]');
-const io = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (e.isIntersecting) {
-      e.target.style.transition = 'all .7s cubic-bezier(.2,.8,.2,1)';
-      e.target.style.transform = 'translateY(0)';
-      e.target.style.opacity = '1';
-      io.unobserve(e.target);
-    }
-  }
-}, { threshold: 0.15 });
-
-for (const el of revealEls) {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  io.observe(el);
-}
-
-// Navigation active on scroll (basic)
-const sections = document.querySelectorAll('section[id]');
-const links = Array.from(document.querySelectorAll('header nav a')).filter(a => a.getAttribute('href')?.startsWith('#'));
-
-function setActiveLink() {
-  let current = '';
-  sections.forEach(sec => {
-    const top = window.scrollY + 120;
-    if (top >= sec.offsetTop && top < sec.offsetTop + sec.offsetHeight) {
-      current = `#${sec.id}`;
-    }
-  });
-  links.forEach(a => {
-    if (a.getAttribute('href') === current) {
-      a.classList.add('text-brand-teal');
-    } else {
-      a.classList.remove('text-brand-teal');
-    }
-  });
-}
-window.addEventListener('scroll', setActiveLink);
-setActiveLink();
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const id = this.getAttribute('href');
-    if (!id || id.length <= 1) return;
-    const target = document.querySelector(id);
-    if (target) {
+  // ==========================================
+  // FORMULAIRE NEWSLETTER
+  // ==========================================
+  const newsletterForm = document.getElementById('newsletterForm');
+  
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+      
+      const emailInput = newsletterForm.querySelector('input[type="email"]');
+      const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+      const email = emailInput.value;
+      
+      // Animation du bouton pendant l'envoi
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Envoi en cours...';
+      submitBtn.disabled = true;
+      
+      // Simulation d'envoi (remplacez par votre API)
+      setTimeout(() => {
+        // Succès
+        submitBtn.textContent = '✓ Inscrit !';
+        submitBtn.classList.add('bg-green-500');
+        
+        // Message de confirmation
+        alert(`✅ Merci pour votre inscription !\n\nVotre email (${email}) a été enregistré avec succès.\n\nVous recevrez prochainement nos actualités.`);
+        
+        // Réinitialisation
+        setTimeout(() => {
+          newsletterForm.reset();
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('bg-green-500');
+        }, 2000);
+      }, 1000);
+    });
+  }
+
+  // ==========================================
+  // SMOOTH SCROLL pour les ancres
+  // ==========================================
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href === '#!' || href.length <= 1) return;
+      
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   });
+
+  // ==========================================
+  // ANIMATIONS AU SCROLL (optionnel)
+  // ==========================================
+  const fadeElements = document.querySelectorAll('[data-reveal]');
+  
+  if (fadeElements.length > 0) {
+    const revealOnScroll = () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight * 0.85;
+        
+        if (isVisible && !el.classList.contains('fade-in')) {
+          el.classList.add('fade-in');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Vérification initiale
+  }
+
+  // ==========================================
+  // HEADER - ombre au scroll
+  // ==========================================
+  const header = document.querySelector('header');
+  
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.classList.add('shadow-lg');
+      } else {
+        header.classList.remove('shadow-lg');
+      }
+    });
+  }
+
+  console.log('✅ RAD-B: Tous les scripts sont actifs');
 });
-
-// Fade-in on scroll for sections (lightweight; complements [data-reveal])
-(function(){
-  const secObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'fadeIn .8s ease-in forwards';
-        secObserver.unobserve(entry.target);
-      }
-    }
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-  document.querySelectorAll('section').forEach(sec => secObserver.observe(sec));
-})();
-
-// News modal (Actualités)
-(function(){
-  const modal = document.getElementById('newsModal');
-  if (!modal) return;
-  const content = modal.querySelector('#newsContent');
-  const dateEl = modal.querySelector('#newsDate');
-  const badgeEl = modal.querySelector('#newsBadge');
-
-  function openNews(id, ctx){
-    // Load template content
-    const tpl = document.getElementById(id);
-    if (tpl && content) {
-      content.innerHTML = tpl.innerHTML;
-    }
-    // Populate badge & date from the clicked card if available
-    if (ctx){
-      const card = ctx.closest('article');
-      if (card){
-        const badge = card.querySelector('span.bg-\\[\\#6FCF97\\]') || card.querySelector('span');
-        const date = card.querySelector('.p-6 .text-sm');
-        if (badge && badgeEl) badgeEl.textContent = badge.textContent.trim();
-        if (date && dateEl) dateEl.textContent = date.textContent.trim();
-      }
-    }
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeNews(){
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('[data-open-news]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      openNews(link.getAttribute('data-open-news'), link);
-    });
-  });
-
-  modal.querySelectorAll('[data-close-news]').forEach(btn => btn.addEventListener('click', closeNews));
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !modal.classList.contains('hidden')) closeNews(); });
-})();
-
-// Newsletter form
-(function(){
-  const form = document.getElementById('newsletterForm');
-  if (!form) return;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const input = form.querySelector('input[type="email"]');
-    const email = (input?.value || '').trim();
-    if (!email) return;
-    alert('Merci pour votre inscription à la newsletter !');
-    form.reset();
-  });
-})();
-
-// Adhesion modal (Adhérer / Soutenir / S'engager)
-(function(){
-  const modal = document.getElementById('adhesionModal');
-  if (!modal) return;
-
-  const tabButtons = () => Array.from(modal.querySelectorAll('.tab-btn'));
-  const panels = () => Array.from(modal.querySelectorAll('[data-tab-panel]'));
-
-  function openModal(defaultTab){
-    modal.classList.remove('hidden');
-    switchTab(defaultTab || 'adherer');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal(){
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  function switchTab(tab){
-    panels().forEach(p => {
-      p.classList.toggle('hidden', p.getAttribute('data-tab-panel') !== tab);
-    });
-    tabButtons().forEach(b => {
-      const active = b.getAttribute('data-tab') === tab;
-      b.classList.toggle('bg-brand-light', active);
-      b.classList.toggle('text-brand-teal', active);
-      b.classList.toggle('hover:bg-gray-100', !active);
-    });
-  }
-
-  // Open triggers
-  document.querySelectorAll('[data-open-modal="adhesion"]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const tab = btn.getAttribute('data-modal-tab');
-      openModal(tab);
-    });
-  });
-
-  // Close triggers
-  modal.querySelectorAll('[data-close-modal]').forEach(el => {
-    el.addEventListener('click', closeModal);
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
-  });
-
-  // Tab buttons
-  tabButtons().forEach(b => {
-    b.addEventListener('click', () => switchTab(b.getAttribute('data-tab')));
-  });
-
-  // Simple submit handlers
-  const forms = ['form-adherer','form-soutenir','form-sengager']
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-  forms.forEach(f => {
-    f.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Merci, votre formulaire a été soumis. Nous vous contacterons très vite.');
-      closeModal();
-      f.reset();
-    });
-  });
-})();
